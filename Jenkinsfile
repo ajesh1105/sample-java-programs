@@ -1,11 +1,9 @@
 pipeline{
     agent any
-    
-    
     stages{
         stage("Git Checkout"){
             steps{
-                https://github.com/ajesh1105/sample-java-programs
+               git 'https://github.com/ajesh1105/sample-java-programs'
             }
         }
         stage("Maven Build"){
@@ -13,4 +11,6 @@ pipeline{
                 sh "mvn clean package"
                 sh "mv target/*.war target/myweb.war"
             }
-        }}}
+        }
+    }
+}
