@@ -12,11 +12,9 @@ pipeline{
                 
                   }
         }
-        stage("deploy to tomcat"){
+        stage("upload to nexus"){
             steps{
-               sshagent(['tomcat-new']) {
-                sh "scp -o StrictHostKeyChecking=no memoryref/target/memoryref.jar ec2-user@172.31.53.86:/opt/tomcat8/webapps"
-                  
+              nexusArtifactUploader artifacts: [[artifactId: 'java-samples', classifier: '', file: 'target/memoryref.jar', type: 'jar']], credentialsId: 'nexus3', groupId: 'com.github.chrishantha.sample', nexusUrl: '172.31.20.36', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://3.85.212.119:8081/repository/simple-java-snapshot/', version: '0.0.2-SNAPSHOT'
                   }
               
             }
