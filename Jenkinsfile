@@ -18,7 +18,7 @@ pipeline{
             nexusArtifactUploader artifacts: [[artifactId: 'java-samples', classifier: '', file: 'memoryleak/target/memoryleak-0.0.2-SNAPSHOT-shaded.jar', 
                                                type: 'jar']], credentialsId: 'nexus3', groupId: 'com.github.chrishantha.sample', nexusUrl: '172.31.20.36:8081',
                                                 nexusVersion: 'nexus3', protocol: 'http', 
-                                               repository: 'http://34.228.70.134:8081/repository/demo-snapshot-0.0.2', version: '0.0.2'
+                                               repository: 'demo-snapshot-0.0.2', version: '0.0.2'
                 }
               
             }
