@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.chrishantha.sample</groupId>
     <artifactId>java-samples</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Java Samples</name>
@@ -148,7 +148,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javac.target>1.8</javac.target>
-        <samples.version>0.0.3-SNAPSHOT</samples.version>
+        <samples.version>0.0.2-SNAPSHOT</samples.version>
         <jcommander.version>1.72</jcommander.version>
         <hdrhistogram.version>2.1.11</hdrhistogram.version>
     </properties>
