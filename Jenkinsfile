@@ -26,7 +26,7 @@ pipeline{
             steps{
                 sshagent(['tomcat-new']) {
 
-   sh 'scp -o StrictHostKeyChecking=no ubuntu@100.25.12.30 memoryref/target/memoryref.jar ec2-user@172.31.53.86:/opt/tomcat8/webapps/'
+   sh 'scp -o StrictHostKeyChecking=no memoryref/target/memoryref.jar ec2-user@172.31.53.86:/opt/tomcat8/webapps/'
 }
                 
                   }
